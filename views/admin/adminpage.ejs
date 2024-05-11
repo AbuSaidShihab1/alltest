@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="/images/transparent.png" type="image/x-icon" />
+    <!-- link admin.css -->
+    <link rel="stylesheet" href="./styles/admin.css" />
+    <title>All Care Academy Admin</title>
+    <style>
+      .adminactive {
+        width: 0%;
+        transition: 0.3s;
+      }
+      .adminacright {
+        width: 100%;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin">
+     <!-- admin sidebar -->
+     <%-include("../partials/adminsidebar.ejs")%>
+     <!-- admin sidebar -->
+      <div class="admin-right">
+        <!-- top header -->
+        <div class="top-header">
+            <div class="side-icon">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="side-icon2">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="admin-pic">
+              <button>Download Free</button>
+              <a href="#">
+                <img src="../images/man.png" alt="">
+              </a>
+            </div>
+          </div>
+<!--  admin student all info -->
+           <div class="student-information">
+            <div class="student-search">
+              <form action="">
+                <input type="text"placeholder="Resgistration"required>
+                <button>Search</button>
+              </form>
+            </div>
+            <!-- table -->
+            <div class="student-data-table">
+              <table>
+                <thead class="thead">
+                  <tr>
+                    <th>Class</th>
+                    <th>Gender</th>
+                    <th>Students</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                   <tr>
+                    <td>Three</td>
+                    <td>Boys and Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-three"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Four</td>
+                    <td>Boys and Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-four"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Five</td>
+                    <td>Boys and Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-five"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Six</td>
+                    <td>Boy</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-six-boys"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Six</td>
+                    <td>Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-six-girls"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Seven</td>
+                    <td>Boy</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-seven-boys"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Seven</td>
+                    <td>Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-seven-girls"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Eight</td>
+                    <td>Boy</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-eight-boys"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Eight</td>
+                    <td>Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-eight-girls"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Nine</td>
+                    <td>Boys</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-nine-boys"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Nine</td>
+                    <td>Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-nine-girls"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Ten</td>
+                    <td>Boys</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-ten-boys"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>Ten</td>
+                    <td>Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-ten-girls"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>HSC First Year</td>
+                    <td>Boys</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-first-year-boys"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>HSC First Year</td>
+                    <td>Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-fist-year-girls"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>HSC Second Year</td>
+                    <td>Boys</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-second-year-boys"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                   <tr>
+                    <td>HSC Second Year</td>
+                    <td>Girls</td>
+                    <td>20</td>
+                    <td>
+                       <button><a href="/admin/class-second-year-girls"><i class="fa fa-eye"></i></a></button>
+                      <button><a href=""><i class="fa fa-trash"></i></a></button></td>
+                   </tr>
+                </tbody>
+              </table>
+             </div>
+
+           </div>
+
+<!--  admin student all info -->
+      </div>
+    </div>
+    <!-- chart.js link -->
+    <script>
+      let adminleft = document.querySelector(".admin-left");
+      let adminright = document.querySelector(".admin-right");
+      let sideicon = document.querySelector(".side-icon");
+      sideicon.addEventListener("click", function () {
+        adminleft.classList.toggle("adminactive");
+        adminright.classList.toggle("adminacright");
+      });
+      let sideicon2 = document.querySelector(".side-icon2");
+      sideicon2.addEventListener("click", function () {
+        adminleft.style.left = "0";
+      });
+      let removebox = document.querySelector(".removebox");
+      removebox.addEventListener("click", () => {
+        adminleft.style.left = "-400px";
+      });
+      var oriloaction = window.location.pathname;
+      var linka = document.querySelectorAll("ul li a").forEach((e) => {
+        if (e.href.includes(oriloaction)) {
+          let icons=e.querySelector("i");
+          e.classList.add("activelink");
+          e.style.color="white";
+          icons.style.color="white"
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="/images/transparent.png" type="image/x-icon" />
+    <!-- link admin.css -->
+    <link rel="stylesheet" href="../styles/admin.css" />
+    <link rel="stylesheet" href="../styles/addstudent.css">
+    <link rel="stylesheet" href="../styles/explorestudent.css">
+    <title>All Care Academy Admin</title>
+    <style>
+      .adminactive {
+        width: 0%;
+        transition: 0.3s;
+      }
+      .adminacright {
+        width: 100%;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin">
+      <!-- admin sidebar -->
+      <%-include("../partials/adminsidebar.ejs")%>
+      <!-- admin sidebar -->
+      <div class="admin-right">
+        <!-- top header -->
+        <div class="top-header">
+            <div class="side-icon">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="side-icon2">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="admin-pic">
+              <button>Download Free</button>
+              <a href="#">
+                <img src="../images/man.png" alt="">
+              </a>
+            </div>
+          </div>
+           <!-- student Details -->
+              <div class="student-detailsbox">
+              
+                <div class="details-search2">
+                    <h1>Result Of Class-8 (Girls)</h1>
+                  <div class="student-search2">
+                    <form action="">
+                      <input type="text"name="search"placeholder="Resgistration"required>
+                      <button>Search</button>
+                    </form>
+                  </div>
+                </div>
+                <div class="details-main">
+                  <%if(resultdata.length >0){%>
+                    <%resultdata.forEach((data)=>{%>
+                      <div class="details-box">
+                        <div class="student-img">
+                            <img src="https://img.freepik.com/premium-psd/designer-man-3d-icon-avatar-people_431668-1343.jpg" alt="">
+                        </div>
+                        <h2><%=data.name%></h2>
+                        <h3>Registration:<%=data.registration%></h3>
+                        <div class="operation-btn">
+                            <button><a href="/admin/student-result/marks/<%=data.registration%>">Marks</a></button>
+                            <button><a href="/delete-student-result/<%=data._id%>">Delete</a></button>
+                        </div>
+                    </div>
+                    <%})%>
+                <%}else{%>
+                        <h1>We do not have any student now</h1>
+                <%}%>
+
+                
+                
+                </div>
+              </div>
+           <!-- student Details -->
+      </div>
+    </div>
+    <!-- chart.js link -->
+    <script>
+      let adminleft = document.querySelector(".admin-left");
+      let adminright = document.querySelector(".admin-right");
+      let sideicon = document.querySelector(".side-icon");
+      sideicon.addEventListener("click", function () {
+        adminleft.classList.toggle("adminactive");
+        adminright.classList.toggle("adminacright");
+      });
+      let sideicon2 = document.querySelector(".side-icon2");
+      sideicon2.addEventListener("click", function () {
+        adminleft.style.left = "0";
+      });
+      let removebox = document.querySelector(".removebox");
+      removebox.addEventListener("click", () => {
+        adminleft.style.left = "-400px";
+      });
+      var oriloaction = window.location.pathname;
+      var linka = document.querySelectorAll("ul li a").forEach((e) => {
+        if (e.href.includes(oriloaction)) {
+          let icons=e.querySelector("i");
+          e.classList.add("activelink");
+          e.style.color="white";
+          icons.style.color="white"
+        }
+      });
+    </script>
+  </body>
+</html>

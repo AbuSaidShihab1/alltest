@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="/images/transparent.png" type="image/x-icon" />
+    <!-- link admin.css -->
+    <link rel="stylesheet" href="/styles/admin.css" />
+    <link rel="stylesheet" href="/styles/explorestudent.css" />
+
+    <title>All Care Academy Admin</title>
+    <style>
+      .adminactive {
+        width: 0%;
+        transition: 0.3s;
+      }
+      .adminacright {
+        width: 100%;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin">
+     <!-- admin sidebar -->
+     <%-include("../partials/adminsidebar.ejs")%>
+     <!-- admin sidebar -->
+      <div class="admin-right">
+         <!-- print button -->
+         <div class="print-btn">
+          <button><img src="/images/printer.png" alt=""></button>
+         </div>
+        <!-- print button -->
+
+        <!-- top header -->
+        <div class="top-header">
+            <div class="side-icon">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="side-icon2">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="admin-pic">
+              <button>Download Free</button>
+              <a href="#">
+                <img src="/images/man.png" alt="">
+              </a>
+            </div>
+          </div>
+
+  <!-- student Details -->
+  <div class="student-result">
+    <div class="resultitle-box">
+     <div class="result-title">
+       <div class="std-image">
+         <img src="<%=studentimage.student_photo%>" alt="">
+       </div>
+    </div>
+    <div class="result-registration">
+     <h2><%=resultname.name%></h1>
+        <h3>Registration: <span><%=resultname.registration%></span></h2>
+        <h3>Class-<span><%=resultname.class_name%></span></h2>
+        <h3>Organization: <span>All Care Academy</span></h2>
+    </div>
+    </div>
+   <%if(resultfind.length >0){%>
+     <table>
+         <tr>
+           <th>Date</th>
+           <th>Subject</th>
+           <th>Number</th>
+           <th>Exam Number</th>
+         </tr>
+       <%resultfind.forEach((data)=>{%>
+         <tr>
+             <td style="color:blue"><%=data.date%></td>
+             <td class="stddata1"><%=data.subject_name%></td>
+             <td class="stddata2"><%=data.subject_number%></td>
+             <td class="stddata3"><%=data.exam_number%></td>
+           </tr>
+       <%})%>
+       </table>
+   <%}else{%>
+      <h2>This Student Do Not Have Any Mark At Any Subject.</h2>
+   <%}%>
+  <div class="totalmark-box">
+      <h2>Total Mark <span>:</span></h2>
+     <div class="mark-box">
+       <h3><%=allnumber%></h3>
+       <div></div>
+       <h3><%=total_add%></h3>
+     </div>
+  </div>
+  </div>
+<!-- student Details -->
+
+      </div>
+    </div>
+    <!-- chart.js link -->
+    <script>
+      let adminleft = document.querySelector(".admin-left");
+      let adminright = document.querySelector(".admin-right");
+      let sideicon = document.querySelector(".side-icon");
+      sideicon.addEventListener("click", function () {
+        adminleft.classList.toggle("adminactive");
+        adminright.classList.toggle("adminacright");
+      });
+      let sideicon2 = document.querySelector(".side-icon2");
+      sideicon2.addEventListener("click", function () {
+        adminleft.style.left = "0";
+      });
+      let removebox = document.querySelector(".removebox");
+      removebox.addEventListener("click", () => {
+        adminleft.style.left = "-400px";
+      });
+      var oriloaction = window.location.pathname;
+      var linka = document.querySelectorAll("ul li a").forEach((e) => {
+        if (e.href.includes(oriloaction)) {
+          let icons=e.querySelector("i");
+          e.classList.add("activelink");
+          e.style.color="white";
+          icons.style.color="white"
+        }
+      });
+    </script>
+  </body>
+</html>

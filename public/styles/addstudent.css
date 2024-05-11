@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.add-student{
+width: 100%;
+min-height: 80vh;
+display: flex;
+justify-content: center;
+padding: 30px 50px;
+  padding-top: 50px;
+}
+.form-box{
+    width: 60%;
+    height: auto;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+    background-color: white;
+    padding: 20px;
+}
+.form-box h1{
+    margin-bottom: 15px;
+}
+.form-box form{
+    width: 100%;
+}
+.input-box{
+    width: 100%;
+    height: 55px;
+    position:relative;
+    margin-bottom: 20px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ecf0f1;
+    outline-color:#00a8ff;
+    font-size: 17px;
+    padding: 0px 15px;
+}
+.input-box select{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border: 1px solid #ecf0f1;
+    padding: 0px 15px;
+}
+.form-box form button{
+    padding: 15px 30px;
+    background-color: #00a8ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    margin-top: 15px;
+}
+.multiple-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.input-smallbox{
+    width: 49%;
+    height: 100%;
+}
+.input-smallbox input{
+    width: 100%;
+    height:55px;
+    border: 1px solid #ecf0f1;
+    outline-color:#00a8ff;
+    font-size: 17px;
+    padding: 0px 15px;
+}
+.message-box{
+  width: 100%;
+  height: 180px;
+}
+.message-box textarea{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 17px;
+  background: none;
+  border: 1px solid #dcdde1;
+  margin-top: 10px;
+  outline-color: #45aaf2;
+}
+.search-inpfield input {
+    width: 100%;
+    height: 55px;
+    padding: 10px;
+    font-size: 17px;
+    background: none;
+    border: 1px solid #dcdde1;
+    margin-bottom: 10px;
+    outline-color: #45aaf2;
+  }
+  .searchbar-header {
+    width: 100%;
+    position: relative;
+  }
+  .auto-suggetion {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: white;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  .sugbox2{
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  table {
+    font-family: "Poppins", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  thead tr th{
+    font-size: 15px;
+    font-weight: 600;
+  }
+  td, th {
+    text-align: left;
+    padding: 8px;
+  }
+  table thead{
+    border-bottom:1px solid #dcdde1 ;
+  }
+  table tbody tr{
+    border-bottom:1px solid #ecf0f1 ;
+    
+  }
+  table tbody tr:nth-child(odd) {
+    background-color: #f5f6fa;
+  }
+  table tbody tr td button{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    color: white;
+  }
+  table tbody tr td button:nth-child(1){
+    background-color: #00a8ff;
+  }
+  table tbody tr td button:nth-child(2){
+    background-color:   #ff6b6b;
+  }
+  table tbody tr td button a{
+    color: white;
+  }
+  .table-pic{
+    display: fles;
+    justify-content: center;
+    align-items: center; 
+    gap:5 ;
+  }
+  .sugbox2:hover{
+    background-color: whitesmoke;
+  }
+  .sugbox2 h2{
+    font-size: 15px;
+    color: #45aaf2;
+  }
+  @media(max-width:768px){
+    .add-student{
+      padding: 30px;
+    }
+    .form-box{
+      width: 100%;
+      box-shadow: none;
+    }
+    .form-box h1{
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .input-box{
+      height: 48px;
+      margin-bottom: 15px;
+    }
+    .input-box input{
+      height: 45px;
+      font-size: 14px;
+    }
+    .input-box select{
+      font-size: 14px;
+    }
+    .form-box form button{
+      padding: 10px 30px;
+      font-size: 14px;
+    }
+  }

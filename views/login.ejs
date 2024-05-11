@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fav cion -->
+    <link
+      rel="shortcut icon"
+      href="/images/transparent.png"
+      type="image/x-icon"
+    />
+    <!-- boxicon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ----------------css link---------------- -->
+    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+
+    <title>All Care Academy-Log In</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-main">
+        <div class="login-box-text">
+         
+          <div class="login-subtext">
+            <h1>All Care Academy</h1>
+            <h3>Sign In to Rechage Direct</h3>
+          </div>
+          <div class="login-img">
+            <img src="https://affixtheme.com/html/xmee/demo/img/figure/bg34-1.png" alt="">
+          </div>
+        </div>
+     
+        <div class="login-form">
+          <div class="login-box">
+            <h1>Admin</h1>
+            <form action="/login" method="POST">
+              <input
+                type="email"
+                placeholder="Enter Email"
+                name="email"
+              /><br />
+                <div class="inp-box1">
+                  <input
+                  id="passwordfield"
+                  type="password"
+                  placeholder="********"
+                  name="password"
+                />
+                <div class="inp-icon">
+                  <i class='bx bx-low-vision'id="showpassword"></i>
+                </div>
+                </div>
+                <div class="back-link">
+                  <a href="/">Go Back</a>
+                </div>
+              <button>Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let passwordfield=document.getElementById("passwordfield");
+      let showpassword=document.getElementById("showpassword");
+      showpassword.addEventListener("click",function(){
+        if(passwordfield.type=="password"){
+             passwordfield.type="text"
+             showpassword.setAttribute("class","fa fa-eye")
+        }else{
+            passwordfield.type="password"
+            showpassword.setAttribute("class","bx bx-low-vision")
+        }
+      })
+    </script>
+  </body>
+</html>

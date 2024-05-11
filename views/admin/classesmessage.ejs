@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="/images/transparent.png" type="image/x-icon" />
+    <!-- link admin.css -->
+    <link rel="stylesheet" href="./styles/admin.css" />
+    <title>All Care Academy Admin</title>
+    <style>
+      .adminactive {
+        width: 0%;
+        transition: 0.3s;
+      }
+      .adminacright {
+        width: 100%;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin">
+     <!-- admin sidebar -->
+     <%-include("../partials/adminsidebar.ejs")%>
+     <!-- admin sidebar -->
+      <div class="admin-right">
+        <!-- top header -->
+        <div class="top-header">
+            <div class="side-icon">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="side-icon2">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="admin-pic">
+              <button>Download Free</button>
+              <a href="#">
+                <img src="../images/man.png" alt="">
+              </a>
+            </div>
+          </div>
+<!--  admin student all info -->
+           <div class="student-information">
+            <div class="student-search">
+              <form action="">
+                <input type="text"placeholder="Resgistration"required>
+                <button>Search</button>
+              </form>
+            </div>
+            <div class="class-boxes">
+                 <div class="class-box">
+                     <div class="class-logo">
+                      <img src="../images/mars.png" alt="image">
+                     </div>
+                     <h2>Class-3</h2>
+                     <h3>Total Students-20</h3>
+                     <button><a href="/classes-message/3">Explore</a></button>
+                 </div>
+                 <div class="class-box">
+                  <div class="class-logo">
+                   <img src="../images/art-and-design.png" alt="image">
+                  </div>
+                  <h2>Class-4</h2>
+                  <h3>Total Students-20</h3>
+                  <button><a href="/classes-message/4">Explore</a></button>
+              </div>
+              <div class="class-box">
+                <div class="class-logo">
+                 <img src="../images/pie-chart.png" alt="image">
+                </div>
+                <h2>Class-5</h2>
+                <h3>Total Students-20</h3>
+                <button><a href="/classes-message/5">Explore</a></button>
+            </div>
+            <div class="class-box">
+              <div class="class-logo">
+               <img src="../images/rgb.png" alt="image">
+              </div>
+              <h2>Class-6 (Boys)</h2>
+              <h3>Total Students-20</h3>
+              <button><a href="/classes-message/6">Explore</a></button>
+          </div>
+          <div class="class-box">
+            <div class="class-logo">
+             <img src="../images/world.png" alt="image">
+            </div>
+            <h2>Class-6 (Girls)</h2>
+            <h3>Total Students-20</h3>
+            <button><a href="/classes-message/7">Explore</a></button>
+        </div>
+        <div class="class-box">
+          <div class="class-logo">
+           <img src="../images/mars.png" alt="image">
+          </div>
+          <h2>Class-7 (Boys)</h2>
+          <h3>Total Students-20</h3>
+          <button><a href="/admin/class-seven-boys">Explore</a></button>
+      </div>
+      <div class="class-box">
+        <div class="class-logo">
+         <img src="../images/mars.png" alt="image">
+        </div>
+        <h2>Class-7 (Girls)</h2>
+        <h3>Total Students-20</h3>
+        <button><a href="/admin/class-seven-girls">Explore</a></button>
+    </div>
+    <div class="class-box">
+      <div class="class-logo">
+       <img src="../images/mars.png" alt="image">
+      </div>
+      <h2>Class-8 (Boys)</h2>
+      <h3>Total Students-20</h3>
+      <button><a href="/admin/class-eight-boys">Explore</a></button>
+  </div>
+  <div class="class-box">
+    <div class="class-logo">
+     <img src="../images/mars.png" alt="image">
+    </div>
+    <h2>Class-8 (Girls)</h2>
+    <h3>Total Students-20</h3>
+    <button><a href="/admin/class-eight-girls">Explore</a></button>
+</div>
+
+<div class="class-box">
+  <div class="class-logo">
+   <img src="../images/mars.png" alt="image">
+  </div>
+  <h2>Class-9 (Boys)</h2>
+  <h3>Total Students-20</h3>
+  <button><a href="/admin/class-nine-boys">Explore</a></button>
+</div>
+<div class="class-box">
+  <div class="class-logo">
+   <img src="../images/mars.png" alt="image">
+  </div>
+  <h2>Class-9 (Girls)</h2>
+  <h3>Total Students-20</h3>
+  <button><a href="/admin/class-nine-girls">Explore</a></button>
+</div>
+<div class="class-box">
+  <div class="class-logo">
+   <img src="../images/mars.png" alt="image">
+  </div>
+  <h2>Class-10 (Boys)</h2>
+  <h3>Total Students-20</h3>
+  <button><a href="/admin/class-ten-boys">Explore</a></button>
+</div>
+<div class="class-box">
+  <div class="class-logo">
+   <img src="../images/mars.png" alt="image">
+  </div>
+  <h2>Class-10 (Girls)</h2>
+  <h3>Total Students-20</h3>
+  <button><a href="/admin/class-ten-girls">Explore</a></button>
+</div>
+
+
+
+
+            </div>
+            <!-- <div class="table-data">
+               <h2>All Students</h2>
+               <table id="customers">
+               <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Registration</th>
+                  <th>Class</th>
+                  <th>Operation</th>
+                </tr>
+               </thead>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                  <td><a href="#">Delete</a>
+                    <a href="#">Update</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Berglunds snabbköp</td>
+                  <td>Christina Berglund</td>
+                  <td>Sweden</td>
+                  <td><a href="#">Delete</a>
+                    <a href="#">Update</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Centro comercial Moctezuma</td>
+                  <td>Francisco Chang</td>
+                  <td>Mexico</td>
+                  <td><a href="#">Delete</a>
+                    <a href="#">Update</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ernst Handel</td>
+                  <td>Roland Mendel</td>
+                  <td>Austria</td>
+                  <td><a href="#">Delete</a>
+                    <a href="#">Update</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>Helen Bennett</td>
+                  <td>UK</td>
+                  <td><a href="#">Delete</a>
+                    <a href="#">Update</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Königlich Essen</td>
+                  <td>Philip Cramer</td>
+                  <td>Germany</td>
+                  <td><a href="#">Delete</a>
+                    <a href="#">Update</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Yoshi Tannamuri</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>Magazzini Alimentari Riuniti</td>
+                  <td>Giovanni Rovelli</td>
+                  <td>Italy</td>
+                </tr>
+                <tr>
+                  <td>North/South</td>
+                  <td>Simon Crowther</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Paris spécialités</td>
+                  <td>Marie Bertrand</td>
+                  <td>France</td>
+                </tr>
+              </table>
+            </div> -->
+           </div>
+
+<!--  admin student all info -->
+      </div>
+    </div>
+    <!-- chart.js link -->
+    <script>
+     let adminleft = document.querySelector(".admin-left");
+      let adminright = document.querySelector(".admin-right");
+      let sideicon = document.querySelector(".side-icon");
+      sideicon.addEventListener("click", function () {
+        adminleft.classList.toggle("adminactive");
+        adminright.classList.toggle("adminacright");
+      });
+      let sideicon2 = document.querySelector(".side-icon2");
+      sideicon2.addEventListener("click", function () {
+        adminleft.style.left = "0";
+      });
+      let removebox = document.querySelector(".removebox");
+      removebox.addEventListener("click", () => {
+        adminleft.style.left = "-400px";
+      });
+      var oriloaction = window.location.pathname;
+      var linka = document.querySelectorAll("ul li a").forEach((e) => {
+        if (e.href.includes(oriloaction)) {
+          let icons=e.querySelector("i");
+          e.classList.add("activelink");
+          e.style.color="white";
+          icons.style.color="white"
+        }
+      });
+    </script>
+  </body>
+</html>

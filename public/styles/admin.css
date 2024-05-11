@@ -1,0 +1,542 @@
+/* roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --admintheme: #e74c3c;
+  -tw-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  --tw-shadow-colored: 0px 0px 16px var(--tw-shadow-color);
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #003147;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #003147;
+  border-radius: 10px;
+}
+.admin {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+.admin-left {
+  width: 20%;
+  height: 100vh;
+  background-color: white;
+  overflow: auto;
+  border: 1px solid whitesmoke;
+  transition: 0.3s;
+}
+.allbook-library {
+  padding: 30px 20px;
+}
+.removebox {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  display: none;
+}
+.removebox i {
+  font-size: 25px;
+  color:black;
+}
+.logo img{
+  width: 40px;
+}
+.title {
+  position: relative;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+.title h3 {
+  font-size:18px;
+  color: black;
+  font-weight: bold;
+}
+.main-menu {
+  width: 100%;
+  height: auto;
+  padding:5px 30px;
+}
+.main-menu ul li {
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+.main-menu ul li a {
+  width: 100%;
+  font-size: 20px;
+  padding:15px;
+  color: rgb(42, 53, 71);
+  text-decoration: none;
+  display: flex;
+  transition: 0.3s;
+  gap: 20px;
+  border-radius: 10px;
+}
+.main-menu ul li a i {
+  font-size: 25px;
+  color: rgb(42, 53, 71);
+}
+.main-menu ul li a:hover {
+  background-color: rgb(93, 135, 255);
+}
+.main-menu ul li:hover a {
+  margin-bottom: 10px;
+  color: white;
+}
+.main-menu ul li:hover a i{
+  color: white;
+}
+@media(max-width:768px){
+  .logo img{
+    width: 30px;
+  }
+  .title h3{
+    font-size: 13px;
+  }
+  .main-menu ul li a{
+    font-size: 15px;
+  }
+  .main-menu ul li a i{
+    font-size: 20px;
+  }
+  .main-menu {
+    padding:5px 20px;
+  }
+}
+/* admin right side */
+.admin-right {
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  overflow: auto;
+  transition: 0.3s;
+}
+.top-header {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin-pic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.admin-pic button{
+  padding: 10px 20px;
+  background-color: #00a8ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.admin-pic a {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+}
+.admin-pic img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.side-icon {
+  cursor: pointer;
+}
+.side-icon i {
+  font-size: 35px;
+}
+.side-icon2 {
+  cursor: pointer;
+  display: none;
+}
+.side-icon2 i {
+  font-size: 35px;
+}
+.admin-pic a p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #353b48;
+  font-family: "Poppins", sans-serif;
+}
+#updatetext {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #ea8685;
+  font-size: 16px;
+}
+.all-info-show {
+  width: 100%;
+  padding: 30px 50px;
+}
+.userinfo-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.userinfobox {
+  width: 48%;
+  height: 150px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.userinfobox img {
+  width: 60px;
+}
+.usertext h2 {
+  font-family: "Varela Round", sans-serif;
+  color: #2c3e50;
+  font-weight: bold;
+}
+.userinfobox .usertext p {
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  color: #1abc9c;
+  font-weight: 600;
+}
+
+.activelink {
+  background-color: rgb(93, 135, 255);
+}
+.activelink {
+    color: white;
+}
+@media(max-width:768px){
+  .admin-pic img{
+    width: 40px;
+    height: 40px;
+  }
+  .admin-pic button{
+    font-size: 13px;
+  }
+}
+/* -----------------table----------------- */
+.allbook-list {
+  width: 100%;
+  height: auto;
+  padding: 30px 50px;
+}
+.booklist-search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.booklist-title h2 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.book-searchbox {
+  width: 30%;
+  display: flex;
+  gap: 5px;
+}
+.book-searchbox form {
+  width: 100%;
+  display: flex;
+}
+.book-searchbox input {
+  width: 80%;
+  height: 50px;
+  padding: 0px 15px;
+  font-size: 16px;
+  background: none;
+  border: 1px solid gray;
+}
+.book-searchbox button {
+  width: 20%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbc531;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+.book-searchbox button i {
+  font-size: 25px;
+}
+.table-main{
+  padding: 20px;
+}
+.table-data{
+  padding-top: 20px;
+}
+.table-data h2{
+     font-size: 25px;
+     padding-bottom: 10px;
+     font-weight: 500;
+}
+/* student information */
+.student-information{
+  width: 100%;
+  height: auto;
+  padding: 20px 50px;
+}
+.student-search{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.student-search form{
+  width: 25%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.student-search form input{
+  width: 70%;
+  height: 100%;
+  padding: 0px 10px;
+  font-size: 15px;
+  border: 1px solid #DFE5EF;
+  border-radius: 5px 0px 0px 5px;
+  outline-color: #1abc9c;
+}
+.student-search form button{
+  width: 30%;
+  height: 100%;
+  background-color: rgb(19, 222, 185);
+  color: white;
+  border: none;
+  cursor:pointer;
+  font-size: 15px;
+  border-radius: 0px 5px 5px 0px;
+}
+.class-boxes{
+  padding-top:30px ;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content:space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.class-box{
+  width: 30%;
+  padding: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.class-logo img{
+  width: 30%;
+  display: block;
+  margin: auto;
+}
+.class-box h2{
+  font-size: 20px;
+  margin-top: 20px;
+}
+.class-box h3{
+  margin-top: 5px;
+  font-size: 18px;
+}
+.class-box button{
+  padding: 10px 20px;
+  background-color: #00a8ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  margin-top: 15px;
+}
+.class-box button a{
+  color: white;
+  text-decoration: none;
+}
+/* student-result */
+.student-result{
+  padding: 20px 50px;
+}
+.student-result h2{
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.table-main{
+  width: 100%;
+  height: auto;
+}
+
+/* result-title */
+.resultitle-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.result-title{
+  width: 100%;
+}
+.std-image img{
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+.result-registration{
+   width: 100%;
+   text-align: right;
+}
+.result-registration h2{
+  font-size: 23px;
+  margin-bottom: 5px;
+  color: #26de81;
+}
+.result-registration h3{
+  font-size: 16px;
+  font-weight: 500;
+  color: #718093;
+}
+/* --------------------table ------------------ */
+table {
+  font-family: "Poppins", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+}
+thead tr th{
+  font-size: 15px;
+  font-weight: 600;
+}
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+table thead{
+  border-bottom:1px solid #dcdde1 ;
+}
+table tbody tr{
+  border-bottom:1px solid #ecf0f1 ;
+  
+}
+table tbody tr:nth-child(odd) {
+  background-color: #f5f6fa;
+}
+table tbody tr td button{
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 3px;
+  color: white;
+}
+table tbody tr td button:nth-child(1){
+  background-color: #00a8ff;
+}
+table tbody tr td button:nth-child(2){
+  background-color:   #ff6b6b;
+}
+table tbody tr td button a{
+  color: white;
+}
+@media (max-width: 768px) {
+  .top-header{
+    padding: 0px 30px;
+  }
+  .admin-left {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 60%;
+    overflow: auto;
+    z-index: 1000000;
+  }
+  .admin-right {
+    width: 100%;
+  }
+  .removebox {
+    display: block;
+  }
+  .removebox i{
+    font-size: 20px;
+  }
+  .student-information{
+    padding: 15px 20px;
+  }
+  .side-icon {
+    display: none;
+  }
+  .side-icon2 {
+    display: block;
+  }
+  .userinfobox {
+    width: 100%;
+  }
+  .student-result{
+    padding: 20px;
+  }
+  .student-search form{
+    width: 100%;
+    height: 40px;
+  }
+  .student-search form input{
+    font-size: 13px;
+  }
+  .student-search form button{
+    font-size: 13px;
+  }
+  .thead tr th:nth-child(3){
+    display: none;
+  }
+  .tbody tr td:nth-child(3){
+    display: none;
+  }
+  table tbody tr td{
+    font-size: 14px
+  };
+  table tbody tr td button{
+    padding: 3px 7px;
+  }
+  .std-image img{
+    width: 100px;
+    height: 100px;
+  }
+  .result-registration h2{
+    font-size: 20px;
+  }
+  .result-registration h3{
+    font-size: 15px;
+  }
+}

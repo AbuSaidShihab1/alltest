@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- fav cion -->
+     <link
+     rel="shortcut icon"
+     href="/images/transparent.png"
+     type="image/x-icon"
+   />
+    <!-- boxicon -->
+   <link rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--css link  -->
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/footer.css">
+   <title>All Care Academy</title>
+</head>
+<body>
+    <!-- main -->
+       <div class="home-container">
+        <div class="splash-screen"id="spashscreen">
+                  <div class="splash-box">
+                    <img src="https://artorias.qodeinteractive.com/wp-content/plugins/artorias-core/inc/spinner/layouts/predefined/assets/img/artorias-ghost.png" alt="">
+                  </div>
+        </div>
+            <div class="home-main">
+                <div class="book1">
+                    <img src="/images/book1.png" alt="" />
+                  </div>
+                  <div class="book2">
+                    <img src="/images/book2.png" alt="" />
+                  </div>
+                  <div class="book3">
+                    <img src="/images/pencil.png" alt="" />
+                  </div>
+                  <div class="book4">
+                    <img src="/images/compas.png" alt="" />
+                  </div>
+            <%-include("./partials/header.ejs")%>
+                <div class="hero-section">
+                    <div class="hero-box">
+                        <h1>Find your result from</h1>
+                        <h1><span>anywhere</span>, & download.</h1>
+                        <h3>Instant everything . Incredible care . Big heart.</h3>
+                        <div class="search-boxes">
+                          <form action=""method="post"onsubmit="return handleform()">
+                            <div class="search-box">
+                                <input type="text"id="search1"placeholder="Registration"name="registration">
+                            </div>
+                            <div class="search-box">
+                                <input type="text"id="search2"placeholder="Class"name="class">
+                            </div>
+                            <div class="search-box"id="genderbox">
+                                <select name="gender" id="search3"name="gender">
+                                    <option value="male">male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="search-box">
+                                <input type="number"name="year"id="search4" min="1900" max="2099" step="1" value="2016" />
+                            </div>
+                            <div class="search-box">
+                                <select name="month" id="search5"name="month">
+                                    <option value="">January</option>
+                                    <option value="">February</option>
+                                    <option value="">March</option>
+                                    <option value="">April</option>
+                                    <option value="">may</option>
+                                    <option value="">June</option>
+                                    <option value="">July</option>
+                                    <option value="">August</option>
+                                    <option value="">Sepetember</option>
+                                    <option value="">October</option>
+                                    <option value="">Novenmer</option>
+                                    <option value="">December</option>
+                                </select>
+                            </div>
+                           <div class="search-box">
+                            <button>Search</button>
+                           </div>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="proverb">
+                    <img src="/images/check.png" alt=""><p>An educational institutuin in Narayanganj.</p>
+                </div>
+            </div>
+            <!------------------- about all care academy------------------- -->
+                   <!-- ------------------about--------------------- -->
+      <div class="about-main">
+        <div class="about-text">
+          <div></div>
+          <h1>About Us</h1>
+        </div>
+        <div class="aboutboxes">
+          <div class="about-box about-left">
+            <h1>
+              Hire the Best Web and Mobile App Developers For Your Project
+            </h1>
+            <div class="about-info">
+              <p>
+                Expertise helps Blueket tackle the world's most difficult
+                challenges. Blueket provides digital products for worldwide
+                brands on the web, mobile, and linked platforms. Expertise helps
+                Blueket tackle the world's most difficult challenges. Blueket
+                provides digital products for worldwide brands on the web,
+                mobile, and linked platforms.
+              </p>
+              <p>
+                Expertise helps Blueket tackle the world's most difficult
+                challenges. Blueket provides digital products for worldwide
+                brands on the web.
+              </p>
+            </div>
+            <button>Read More</button>
+          </div>
+          <div class="about-box about-right">
+            <div class="about-right1">
+              <div class="aboutcontent-box">
+                <img src="/images/teacher.png" alt="" />
+                <h2>15 +</h2>
+                <h3>Teachers</h3>
+              </div>
+              <div class="aboutcontent-box">
+                <img src="/images/male-student.png" alt="" />
+                <h2>300 +</h2>
+                <h3>Students</h3>
+              </div>
+            </div>
+
+            <div class="about-right2">
+              <div class="aboutcontent-box">
+                <img src="/images/experience.png" alt="" />
+                <h2><span id="count1">13</span> +</h2>
+                <h3>Years Exoeriance</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ------------------about--------------------- -->
+            <!------------------- about all care academy------------------- -->
+            <!-- serice section -->
+               <div class="services-main">
+                <div class="service-box">
+                    <div class="service-text">
+                        <h2>One Stop Study Solution.</h2>
+                        <p>100% Reliable</p>
+                    </div>
+                    <div class="service-boximg">
+                        <img src="http://jano.symphonythemes.net/sites/jano/files/images/icon/icon_100.svg" alt="">
+                    </div>
+                </div>
+                <div class="service-box">
+                    <div class="service-text">
+                        <h2>One To One Discussion</h2>
+                        <p>100% Reliable</p>
+                    </div>
+                    <div class="service-boximg">
+                        <img src="http://jano.symphonythemes.net/sites/jano/files/images/icon/icon_101.svg" alt="">
+                    </div>
+                </div>
+                <div class="service-box">
+                    <div class="service-text">
+                        <h2>End To End Support</h2>
+                        <p>100% Reliable</p>
+                    </div>
+                    <div class="service-boximg">
+                        <img src="http://jano.symphonythemes.net/sites/jano/files/images/icon/icon_102.svg" alt="">
+                    </div>
+                </div>
+               </div>
+            <!-- serice section -->
+               <!-- ------------------teachers------------------------- -->
+      <div class="teacher-main">
+        <div class="about-text">
+          <div></div>
+          <h1>Meet Our Instructors</h1>
+        </div>
+        <div class="all-teacher">
+          <div class="teacherbox">
+            <div class="teacher-pic">
+              <img
+                src="https://themephi.net/template/eduan/eduan/assets/img/teacher/2/5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="teacher-info">
+              <div class="teacher-maininfo">
+                <h2>Ali Polash</h2>
+                <h4>Math Teacher</h4>
+              </div>
+              <div class="teacher-social">
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-facebook"></i></a>
+                </div>
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-twitter"></i></a>
+                </div>
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="teacherbox">
+            <div class="teacher-pic">
+              <img
+                src="https://themephi.net/template/eduan/eduan/assets/img/teacher/2/3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="teacher-info">
+              <div class="teacher-maininfo">
+                <h2>Ali Polash</h2>
+                <h4>Math Teacher</h4>
+              </div>
+              <div class="teacher-social">
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-facebook"></i></a>
+                </div>
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-twitter"></i></a>
+                </div>
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="teacherbox">
+            <div class="teacher-pic">
+              <img
+                src="https://themephi.net/template/eduan/eduan/assets/img/teacher/2/4.jpg"
+                alt=""
+              />
+            </div>
+            <div class="teacher-info">
+              <div class="teacher-maininfo">
+                <h2>Ali Polash</h2>
+                <h4>Math Teacher</h4>
+              </div>
+              <div class="teacher-social">
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-facebook"></i></a>
+                </div>
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-twitter"></i></a>
+                </div>
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="teacherbox">
+            <div class="teacher-pic">
+              <img
+                src="https://themephi.net/template/eduan/eduan/assets/img/teacher/2/1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="teacher-info">
+              <div class="teacher-maininfo">
+                <h2>Ali Polash</h2>
+                <h4>Math Teacher</h4>
+              </div>
+              <div class="teacher-social">
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-facebook"></i></a>
+                </div>
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-twitter"></i></a>
+                </div>
+                <div class="social-box">
+                  <a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ------------------teachers------------------------- -->
+      <!-- registration form -->
+      <div class="registration-advertisement">
+        <div class="registrationsub-advertise">
+          <div class="advertisement-box advertisementbox1">
+            <img src="/images/3dcartoon.webp" alt="" />
+          </div>
+          <div class="advertisement-box advertisementbox2">
+            <h2>Your Are Not A Student Of</h2>
+            <h1>All Care Academy</h1>
+            <button>
+              Register
+              <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- registraton form -->
+        <!-- -----------------our latest blogs---------------------- -->
+        <div class="blog-main">
+            <div class="about-text">
+              <div></div>
+              <h1>Our Latest Blogs</h1>
+            </div>
+            <div class="blog-contaner">
+              <div class="blog-box">
+                <div class="blog-image">
+                  <img
+                    src="https://eduko-react.wpolive.com/static/media/img-1.bf56604b970f1ad08793.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="blog-textinfo">
+                  <div class="uploader-info">
+                    <p>23 Sep 2023</p>
+                    <h3>Ali Polash</h3>
+                  </div>
+                  <h1>Creative Class Library For Students</h1>
+    
+                  <button>Read More</button>
+                </div>
+              </div>
+              <div class="blog-box">
+                <div class="blog-image">
+                  <img
+                    src="https://eduko-react.wpolive.com/static/media/img-2.f7bd8c8857905893d42b.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="blog-textinfo">
+                  <div class="uploader-info">
+                    <p>23 Sep 2023</p>
+                    <h3>Ali Polash</h3>
+                  </div>
+                  <h1>Creative Class Library For Students</h1>
+                  <button>Read More</button>
+                </div>
+              </div>
+              <div class="blog-box">
+                <div class="blog-image">
+                  <img
+                    src="https://eduko-react.wpolive.com/static/media/img-3.d9ba592440203e61e32b.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="blog-textinfo">
+                  <div class="uploader-info">
+                    <p>23 Sep 2023</p>
+                    <h3>Ali Polash</h3>
+                  </div>
+                  <h1>Creative Class Library For Students</h1>
+    
+                  <button>Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- -----------------our latest blogs---------------------- -->
+    
+            <!-------------------- footer------------- -->
+                  <%-include("partials/footer.ejs")%>
+            <!-------------------- footer------------- -->
+       </div>
+    <!-- main -->
+    <script>
+      let closeicon=document.getElementById("closeicon");
+      let header=document.querySelector("header");
+      let nav=document.querySelector("nav");
+      let menubar=document.getElementById("menubar");
+      menubar.addEventListener("click",()=>{
+            nav.style.left="0";
+      });
+      closeicon.addEventListener("click",()=>{
+        nav.style.left="-60%"
+      })
+      window.addEventListener("scroll",()=>{
+        if(scrollY >0){
+          header.classList.add("activenavbar")
+        }else{
+          header.classList.remove("activenavbar")
+        }
+      })
+        window.addEventListener("load",()=>{
+            let spashscreen=document.getElementById("spashscreen");
+            spashscreen.style.display="none"
+        })
+        function handleform(){
+            let search12=document.getElementById("search1");
+            let search1=document.getElementById("search1").value;
+            let search2=document.getElementById("search2").value;
+            let search22=document.getElementById("search2");
+            if(search1.length<=5 || search1.length>=7){
+               search12.style.border="2px solid red";
+               return false;
+            }
+            else if(search2.length<=0){
+               search22.style.border="2px solid red";
+               return false;
+            }
+        
+        }
+    </script>
+</body>
+</html>

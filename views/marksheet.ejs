@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- fav cion -->
+      <link
+      rel="shortcut icon"
+      href="/images/transparent.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/styles/marksheet.css">
+    <title>MarkSheet-All Care Academy</title>
+</head>
+<body>
+    <div class="markshhet-container">
+          <div class="mark-main">
+              <h1>All Care Academy</h1>
+              <div class="result-logo">
+                <img src="/images/transparentlogo.png" alt="">
+              </div>
+              <div class="main-title">
+                <h1>Academic Transcript</h1>
+                <hr>
+              </div>
+              <!-- student full info -->
+                   <div class="student-info">
+                       <div class="info-box">
+                           <div class="info-name">
+                               <h3>Name of Student</h3>
+                           </div>
+                           <div class="info-ans">
+                               <h3><%=findstudent.name%></h3>
+                           </div>
+                       </div>
+                       <div class="info-box">
+                        <div class="info-name">
+                            <h3>Father's Name</h3>
+                        </div>
+                        <div class="info-ans">
+                            <h3><%=findstudent.father_name%></h3>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-name">
+                            <h3>Registration No</h3>
+                        </div>
+                        <div class="info-ans">
+                            <h3><%=findstudent.registration%></h3>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-name">
+                            <h3>Name of Institution</h3>
+                        </div>
+                        <div class="info-ans">
+                            <h3>All Care Academy</h3>
+                        </div>
+                    </div>
+            
+                   </div>
+              <!-- student full info -->
+              <!-- numbers table -->
+              
+<table>
+    <tr>
+      <th>SI.NO</th>
+      <th>Subject</th>
+      <th>Claim Number</th>
+      <th>Exam Number</th>
+
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Bangla</td>
+      <td><%=num1%></td>
+      <td rowspan="7"style="font-size:25px;text-align:center"><%=totalnumber%></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>English</td>
+      <td><%=num2%></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Math</td>
+      <td><%=num3%></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Islam</td>
+      <td><%=num4%></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Social</td>
+      <td><%=num5%></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>ICT</td>
+      <td><%=num6%></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Science</td>
+        <td><%=num7%></td>
+      </tr>
+  </table>
+
+  <!-- Numbers Table -->
+  <div class="sign-info">
+    <div class="signature-image">
+    <img src="https://www.signwell.com/assets/vip-signatures/muhammad-ali-signature-3f9237f6fc48c3a04ba083117948e16ee7968aae521ae4ccebdfb8f22596ad22.svg" alt="">
+    </div>
+    <hr>
+      <h3>HeadTeacher Signature</h3>
+  </div>
+          </div>
+    </div>
+</body>
+</html>

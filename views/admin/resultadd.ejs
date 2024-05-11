@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="/images/transparent.png" type="image/x-icon" />
+    <!-- link admin.css -->
+    <link rel="stylesheet" href="./styles/admin.css" />
+    <link rel="stylesheet" href="./styles/addstudent.css">
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+    <title>All Care Academy Admin</title>
+    <style>
+      .adminactive {
+        width: 0%;
+        transition: 0.3s;
+      }
+      .adminacright {
+        width: 100%;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin">
+      <!-- admin sidebar -->
+      <%-include("../partials/adminsidebar.ejs")%>
+      <!-- admin sidebar -->
+      <div class="admin-right">
+        <!-- top header -->
+        <div class="top-header">
+            <div class="side-icon">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="side-icon2">
+              <i class="bx bx-menu"></i>
+            </div>
+            <div class="admin-pic">
+              <button>Download Free</button>
+              <a href="#">
+                <img src="../images/man.png" alt="">
+              </a>
+            </div>
+          </div>
+          <!-- add student from -->
+          <div class="add-student">
+            <div class="form-box">
+                      <h1>Add Result</h1>
+                      <!-- <div class="allcare-logo">
+                         <img src="../images/transparentlogo.png" alt="">
+                      </div> -->
+                      <form action="/result-add"method="post">
+                       <div class="searchbar-header">
+                         <div class="search-inpfield">
+                           <input type="text" name="registration"id="searchfield"placeholder="Registration">
+                         </div>
+                         <div class="auto-suggetion"></div>
+                       </div>
+                         
+                          <div class="input-box">
+                           <input type="date" name="date" id="datepicker"placeholder="Registration">
+                          </div>
+                          <div class="input-box">
+                           <select name="subject_name" id="">
+                               <option value="bangla">Bangla</option>
+                               <option value="english">English</option>
+                               <option value="math">Math</option>
+                               <option value="social">Social</option>
+                               <option value="science">Science</option>
+                               <option value="islam">Islam</option>
+                               <option value="ict">ICT</option>
+                               <option value="higher math">Higer Math</option>
+                               <option value="biology">Biology</option>
+                               <option value="physics">Physics</option>
+                               <option value="chemistry">Chemistry</option>
+                           </select>
+                          </div>
+                        <div class="multiple-box">
+                         <div class="input-smallbox">
+                           <label for="number">Received Number</label><br>
+                           <input type="number"value="0" name="subject_number" id=""placeholder="Enter Number">
+                          </div>
+                          <div class="input-smallbox">
+                           <label for="number">Exam Number</label><br>
+                           <input type="number"value="0" name="exam_number" id=""placeholder="Enter Number">
+                          </div>
+                        </div>
+                        <div class="message-box">
+                         <textarea name="message" id="messagebox" cols="30" rows="10"placeholder="আজ {Date} এল কেয়ার একাডেমী দ্বারা একটি পরীক্ষা আয়োজন করা হয়েসিলো | উক্ত পরীক্ষায় আপনার সন্তান {Claim Number} এ {Exam Number} পেয়েছে |আরো তথ্য পেতে অল কেয়ার একাডেমী এর সাথে যুক্ত থাকুন |"></textarea>
+                      </div>
+                          <%if(typeof message !=="undefined"){%>
+                           <p style="color: white;padding: 10px 10px;width: 100%;background-color: #20bf6b;"><%=message%></p>
+                           <%}%>
+                          <button>Submit</button>
+                      </form>
+            </div>
+         </div>
+      <!-- add student form -->
+      </div>
+    </div>
+    <!-- chart.js link -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script> -->
+    <script>
+         let autocomplete_search = document.getElementById("searchfield");
+      let search_result = document.querySelector(".auto-suggetion");
+      autocomplete_search.addEventListener("input", () => {
+        search_result.style.display = "block";
+        load_data(autocomplete_search.value);
+      });
+      async function load_data(query) {
+        let data = await fetch("/get_data");
+        let datajson = await data.json();
+        let matches = datajson.allbookinfo;
+        search_result.innerHTML = "";
+
+        let result = [];
+        if (query.length > 0) {
+          matches.filter((element) => {
+            if (
+              element.name.toLowerCase().includes(query.toLowerCase()) ||
+              element.registration.includes(query)
+            ) {
+              let createp = document.createElement("p");
+              let createh2 = document.createElement("h2");
+              createh2.innerHTML = element.name;
+              createp.innerHTML = "Class-"+element.class_name;
+              let createbox = document.createElement("div");
+              let createbox2 = document.createElement("div");
+              createbox.setAttribute("class", "sugbox1");
+              createbox2.setAttribute("class", "sugbox2");
+              createbox.setAttribute("title", element.registration);
+              createh2.setAttribute("title", element.registration);
+              createp.setAttribute("title", element.registration);
+              createbox2.appendChild(createp);
+              createbox2.appendChild(createh2);
+              createbox.appendChild(createbox2);
+              search_result.appendChild(createbox);
+              createbox.addEventListener("click", (e) => {
+                autocomplete_search.value = e.target.title;
+                search_result.style.display = "none";
+
+                // console.log(e.target.title);
+              });
+              // search_result.innerHTML += `
+              // <li title="sdsds">
+              //       <div class="suggetion-box" title="sdsds">
+              //         <div class="sugbox-img" title="sdsds">
+              //           <!-- <img src="${element.image}" alt=""title="${element.book_name}" /> -->
+              //         </div>
+              //         <div class="sugbox-text" title="sdsds">
+              //           <h3 title="sdsds">sdsd</h3>
+              //           <p title="sdsds">sdsd</p>
+              //         </div>
+              //       </div>
+              //     </li>
+              // `;
+            }
+          });
+        }
+      }
+        let adminleft = document.querySelector(".admin-left");
+      let adminright = document.querySelector(".admin-right");
+      let sideicon = document.querySelector(".side-icon");
+      sideicon.addEventListener("click", function () {
+        adminleft.classList.toggle("adminactive");
+        adminright.classList.toggle("adminacright");
+      });
+      let sideicon2 = document.querySelector(".side-icon2");
+      sideicon2.addEventListener("click", function () {
+        adminleft.style.left = "0";
+      });
+      let removebox = document.querySelector(".removebox");
+      removebox.addEventListener("click", () => {
+        adminleft.style.left = "-400px";
+      });
+      var oriloaction = window.location.pathname;
+      var linka = document.querySelectorAll("ul li a").forEach((e) => {
+        if (e.href.includes(oriloaction)) {
+          let icons=e.querySelector("i");
+          e.classList.add("activelink");
+          e.style.color="white";
+          icons.style.color="white"
+        }
+      });
+      let handleform=document.getElementById("handleform");
+      handleform.addEventListener("click",(e)=>{
+          e.preventDefault();
+    Swal.fire({
+  icon: "success",
+  title: "Successful!",
+  text: "You have added a student information!",
+});
+      })
+     
+    
+    </script>
+  </body>
+</html>
+
+
+
+

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Bengali", sans-serif;
+}
+.search-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://png.pngtree.com/background/20210714/original/pngtree-doctor-hat-biology-learning-blackboard-education-background-picture-image_1219835.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-main{
+    width: 50%;
+    height: 600px;
+    background-color: white;
+}
+.searchbox-top{
+    width: 100%;
+    height: 30%;
+    background-color: #00a8ff;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    gap: 30px;
+}
+.searchbox-bottom{
+    width: 100%;
+    height: 70%;
+    background-color: white;
+}
+.logo-box{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+.logo-box img{
+    width: 80px;
+}
+.search-title h1{
+    color:white ;
+    margin-bottom: 10px;
+}
+.search-title h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+.search-title h3 span{
+    font-size: 14px;
+    margin-left: 10px;
+    color: #f7f1e3;
+}
+form{
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+}
+.input-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+.input-text h3 span{
+  margin-left: 10px;
+}
+.input-field{
+    width: 70%;
+    height: 50px;
+}
+.input-field input{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #dcdde1;
+    border-radius: 2px;
+}
+.submit-group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.submit-group button{
+    width: 140px;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fbc531;
+}
+.submit-group button a{
+    color: white;
+    text-decoration: none;
+}

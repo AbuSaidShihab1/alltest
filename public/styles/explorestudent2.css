@@ -1,0 +1,207 @@
+.student-detailsbox{
+    width: 100%;
+    height: auto;
+    padding: 20px 50px;
+}
+.student-detailsbox h1{
+    font-size: 25px;
+}
+.details-main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.details-search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+.details-box{
+    width: 30%;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.student-img img{
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+.details-box h2{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.details-box h3{
+    font-size: 20px;
+    margin-top:4px;
+}
+.details-search2{
+    width: 100%;
+    padding:20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .student-search2 form{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .student-search2 form input{
+    width: 70%;
+    height: 100%;
+    padding: 0px 10px;
+    font-size: 15px;
+    border: 1px solid #DFE5EF;
+    border-radius: 5px 0px 0px 5px;
+    outline-color: #1abc9c;
+  }
+  .student-search2 form button{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(19, 222, 185);
+    color: white;
+    border: none;
+    cursor:pointer;
+    font-size: 15px;
+    border-radius: 0px 5px 5px 0px;
+  }
+  .operation-btn{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.operation-btn button{
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+.operation-btn button:first-child{
+    background: linear-gradient(90deg, #90caf9, #047edf 99%);
+    color: #fff;
+}
+.operation-btn button:last-child{
+    background: linear-gradient(90deg, #ffbf96, #fe7096);
+}
+.operation-btn button a{
+    color: white;
+    text-decoration: none;
+}
+@media(max-width:768px){
+    .student-detailsbox{
+        padding: 20px;
+    }
+    .student-detailsbox h1{
+        font-size: 14px;
+    }
+    .student-search2 form input{
+       font-size: 13px;
+    }
+    .student-search2 form button{
+        font-size: 13px;
+    }
+    table thead tr th{
+        font-size: 13px;
+    }
+    table thead tr tr{
+        font-size: 12px;
+    }
+    table thead tr td{
+       
+    }
+    
+  
+    .details-box{
+        width: 100%;
+    }
+    .details-box h2{
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .details-box h3{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .operation-btn button{
+        font-size: 14px;
+    }
+}
+/* ---------------totalmark-box----------- */
+.totalmark-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+
+}
+.totalmark-box h2{
+    font-size: 21px;
+    margin-right: 15px;
+}
+.mark-box{
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid red;
+    border-radius: 50%;
+}
+.mark-box h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+.mark-box div{
+    width: 100%;
+    border: 2px solid red;
+}
+@media(max-width:768px){
+    .totalmark-box h2{
+        font-size: 18px;
+    }
+    .mark-box h3{
+        font-size: 15px;
+    }
+    .mark-box{
+        padding: 15px;
+    }
+}
+/* -------------printer-btn---------------- */
+.print-btn{
+    position: fixed;
+    bottom: 100px;
+    right: 70px;
+}
+.print-btn button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.print-btn button img{
+    width: 60px;
+    height: 60px;
+}
+
+@media(max-width:768px){
+    .print-btn{
+        bottom: 40px;
+        right: 30px;
+    }
+    .print-btn button img{
+        width: 30px;
+        height: 30px;
+    }
+}
