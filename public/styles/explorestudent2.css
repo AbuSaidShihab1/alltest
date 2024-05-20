@@ -112,12 +112,13 @@
     }
     table thead tr th{
         font-size: 13px;
+        font-weight: 500;
     }
     table thead tr tr{
         font-size: 12px;
     }
     table thead tr td{
-       
+       color: rgb(241, 242, 246);
     }
     
   

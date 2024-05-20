@@ -19,7 +19,7 @@
     <link rel="icon" href="/images/transparent.png" type="image/x-icon" />
     <!-- link admin.css -->
     <link rel="stylesheet" href="/styles/admin.css" />
-    <link rel="stylesheet" href="/styles/explorestudent.css" />
+    <link rel="stylesheet" href="/styles/explorestudent2.css" />
 
     <title>All Care Academy Admin</title>
     <style>
@@ -31,6 +31,7 @@
         width: 100%;
         transition: 0.3s;
       }
+     
     </style>
   </head>
   <body>
@@ -41,7 +42,7 @@
       <div class="admin-right">
          <!-- print button -->
          <div class="print-btn">
-          <button><img src="/images/printer.png" alt=""></button>
+          <button onclick="printbtn()"><img src="/images/printer.png" alt=""></button>
          </div>
         <!-- print button -->
 
@@ -62,7 +63,7 @@
           </div>
 
   <!-- student Details -->
-  <div class="student-result">
+  <div class="student-result"id="student_result">
     <div class="resultitle-box">
      <div class="result-title">
        <div class="std-image">
@@ -135,6 +136,14 @@
           icons.style.color="white"
         }
       });
+      // -----------------print function----------
+      function printbtn(){
+        let student_result=document.getElementById("student_result").innerHTML;
+        let orginal_content=document.body.innerHTML;
+        document.body.innerHTML=student_result;
+        window.print();
+        document.body.innerHTML=original;
+      }
     </script>
   </body>
 </html>

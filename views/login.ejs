@@ -43,6 +43,8 @@
                 type="email"
                 placeholder="Enter Email"
                 name="email"
+                value="admin@gmail.com"
+                required
               /><br />
                 <div class="inp-box1">
                   <input
@@ -50,6 +52,9 @@
                   type="password"
                   placeholder="********"
                   name="password"
+                  value="12345"
+                required
+
                 />
                 <div class="inp-icon">
                   <i class='bx bx-low-vision'id="showpassword"></i>
@@ -66,6 +71,16 @@
     </div>
 
     <script>
+        let closeicon=document.getElementById("closeicon");
+      let header=document.querySelector("header");
+      let nav=document.querySelector("nav");
+      let menubar=document.getElementById("menubar");
+      menubar.addEventListener("click",()=>{
+            nav.style.left="0";
+      });
+      closeicon.addEventListener("click",()=>{
+        nav.style.left="-60%"
+      })
       let passwordfield=document.getElementById("passwordfield");
       let showpassword=document.getElementById("showpassword");
       showpassword.addEventListener("click",function(){
