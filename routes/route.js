@@ -203,6 +203,7 @@ route.post("/result-add",async(req,res)=>{
         const resultinfo=new resultmodel({
             name,registration,gender,class_name,subject_name,subject_number,exam_number,date
         });
+        const matchdata2=await studentmodel.find({registration:registration});
         if(resultinfo){
               async function sendWhatsAppMessage(data) {
                   const url = 'https://wa.positiveapi.com/api/send_media_file';
@@ -234,9 +235,10 @@ route.post("/result-add",async(req,res)=>{
               
               // Example usage
               const messageData = {
-                  number: 8801950901028, // replace with the desired phone number
+                  number:matchdata2.number , // replace with the desired phone number
                   type: 'text',
-                  message: `আজ ${date} অল কেয়ার একাডেমী দ্বারা একটি পরীক্ষা আয়োজন করা হয়েসিলো | উক্ত পরীক্ষায় আপনার সন্তান  ${subject_number} এ ${exam_number} পেয়েছে |আরো তথ্য পেতে অল কেয়ার একাডেমী এর সাথে যুক্ত থাকুন |`,
+                  message: `আপনার সন্তানের পড়াশোনার মনোযোগ বৃদ্ধির জন্য আমরা ${date} ষাণ্মাসিক  মূল্যায়ন পরীক্ষার আয়োজন করি | আজ পরীক্ষার ফলাফল দেয়া  হয়েছে | আপনার সন্তানের প্রাপ্ত নম্বর ${subject_number} পরীক্ষার নম্বর ${exam_number}|আপনার সন্তানের প্রতি আপনাকে আরো দায়িত্ববান হওয়ার জন্য বিনীত অনুরোধ জানাচ্ছি |
+                  -অল কেয়ার একাডেমী`,
                   instance_id: '6613AF256BFE2',
                   access_token: '6613ab53a28ec'
               };
