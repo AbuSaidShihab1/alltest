@@ -130,9 +130,27 @@ route.post("/login",async(req,res)=>{
 });
 
 // admin page
-route.get("/admin",adminmiddleware.isadmin,(req,res)=>{
+route.get("/admin",adminmiddleware.isadmin,async(req,res)=>{
     try{
-          res.render("../views/admin/adminpage")
+         const classthree=await studentmodel.find({class_name:"3"}).count();
+         const classfour=await studentmodel.find({class_name:"4"}).count();
+         const classfive=await studentmodel.find({class_name:"5"}).count();
+         const classsixboys=await studentmodel.find({class_name:"6",gender:"male"}).count();
+         const classsevenboys=await studentmodel.find({class_name:"7",gender:"male"}).count();
+         const classeightboys=await studentmodel.find({class_name:"8",gender:"male"}).count();
+         const classnineboys=await studentmodel.find({class_name:"9",gender:"male"}).count();
+         const classtenboys=await studentmodel.find({class_name:"10",gender:"male"}).count();
+         const classelevenboys=await studentmodel.find({class_name:"11",gender:"male"}).count();
+         const classtwelveboys=await studentmodel.find({class_name:"12",gender:"male"}).count();
+         const classsixgirls=await studentmodel.find({class_name:"6",gender:"female"}).count();
+         const classsevengirls=await studentmodel.find({class_name:"7",gender:"female"}).count();
+         const classeightgirls=await studentmodel.find({class_name:"8",gender:"female"}).count();
+         const classninegirls=await studentmodel.find({class_name:"9",gender:"female"}).count();
+         const classtengirls=await studentmodel.find({class_name:"10",gender:"female"}).count();
+         const classelevengirls=await studentmodel.find({class_name:"11",gender:"female"}).count();
+         const classtwelvegirls=await studentmodel.find({class_name:"12",gender:"female"}).count();
+         console.log(classtwelvegirls);
+          res.render("../views/admin/adminpage",{classthree,classfour,classfive,classsixboys,classsixgirls,classsevenboys,classsevengirls,classeightboys,classeightgirls,classnineboys,classninegirls,classtenboys,classtengirls,classelevenboys,classelevengirls,classtwelveboys,classtwelvegirls});
     }catch(err){
         console.log(err.message)
     }
@@ -203,7 +221,8 @@ route.post("/result-add",async(req,res)=>{
         const resultinfo=new resultmodel({
             name,registration,gender,class_name,subject_name,subject_number,exam_number,date
         });
-        const matchdata2=await studentmodel.find({registration:registration});
+        const matchdata2=await studentmodel.findOne({registration:registration});
+        console.log(matchdata2);
         if(resultinfo){
               async function sendWhatsAppMessage(data) {
                   const url = 'https://wa.positiveapi.com/api/send_media_file';
@@ -235,7 +254,7 @@ route.post("/result-add",async(req,res)=>{
               
               // Example usage
               const messageData = {
-                  number:matchdata2.number , // replace with the desired phone number
+                  number:+`88${matchdata2.number}`, // replace with the desired phone number
                   type: 'text',
                   message: `আপনার সন্তানের পড়াশোনার মনোযোগ বৃদ্ধির জন্য আমরা ${date} ষাণ্মাসিক  মূল্যায়ন পরীক্ষার আয়োজন করি | আজ পরীক্ষার ফলাফল দেয়া  হয়েছে | আপনার সন্তানের প্রাপ্ত নম্বর ${subject_number} পরীক্ষার নম্বর ${exam_number}|আপনার সন্তানের প্রতি আপনাকে আরো দায়িত্ববান হওয়ার জন্য বিনীত অনুরোধ জানাচ্ছি |
                   -অল কেয়ার একাডেমী`,
